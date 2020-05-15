@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cb {
+            width: 120px;
+
+            height: 40px;
+
+            background: #333;
+
+            margin: 20px 60px;
+
+
+
+            border-radius: 50px;
+
+            position: relative;
+
+        }
+        .cb:before {
+            content: '';
+
+            position: absolute;
+
+            top: 19px;
+
+            left: 14px;
+
+            height: 2px;
+
+            width: 90px;
+
+            background: #111;
+
+        }
+
+        .cb label {
+
+            display: block;
+
+            width: 22px;
+
+            height: 22px;
+
+            border-radius: 50%;
+
+
+
+            -webkit-transition: all .5s ease;
+
+            -moz-transition: all .5s ease;
+
+            -o-transition: all .5s ease;
+
+            -ms-transition: all .5s ease;
+
+            transition: all .5s ease;
+
+            cursor: pointer;
+
+            position: absolute;
+
+            top: 9px;
+
+            z-index: 1;
+
+            left: 12px;
+
+            background: #ddd;
+
+        }
+        .cb input[type=checkbox]:checked + label {
+            left: 84px;
+
+            background: #26ca28;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="cb">
+
+    <input type="checkbox" id="cb1" style="opacity: 0%"  onclick="check('cb1')">
+
+    <label for="cb1"></label>
+    <br>
+
+</div>
+<div class="cb" style="top: 60px">
+    <input type="checkbox" id="cb2" style="opacity: 0%;" value="Bổ" onclick="check('cb2')">
+
+    <label for="cb2"></label>
+
+
+</div>
+<div class="cb" style="top: 120px">
+    <input type="checkbox" id="cb3" style="opacity: 0%;" value="Rẻ" onclick="check('cb3')">
+
+    <label for="cb3"></label>
+
+</div>
+<script>
+    // let ngon = document.getElementById('cb1');
+    // let bo = document.getElementById('cb2');
+    // let re = document.getElementById('cb3');
+    // // function chon1() {
+    //     if (ngon.checked===true && bo.checked===true){
+    //         if (re.checked===true){
+    //             bo.checked===false;
+    //         }
+    //     }
+    // }
+    function check(hientai) {
+        let cb1 = document.getElementById('cb1');
+        let cb2 = document.getElementById('cb2');
+        let cb3 = document.getElementById('cb3');
+        let kq = false
+        switch (hientai) {
+            case 'cb1':
+                kq = cb2.checked && cb3.checked
+                if (kq){
+                    cb2.checked = false
+                }
+                break;
+            case 'cb2':
+                kq = cb1.checked && cb3.checked
+                if (kq){
+                    cb1.checked = false
+                }
+                break;
+            case 'cb3':
+                kq = cb1.checked && cb2.checked
+                if (kq){
+                    cb2.checked = false
+                }
+                break;
+
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

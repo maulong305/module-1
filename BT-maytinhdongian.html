@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #a1 {
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+<!--<div>-->
+<!--    <table>-->
+
+<!--    -->
+<!--        <tr>-->
+<!--            <input type="text" id="a1">-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><input type="button" onclick="seven()" value="7"></td>-->
+<!--            <td><input type="button" onclick="eight()" value="8"></td>-->
+<!--            <td><input type="button" onclick="nine()" value="9"></td>-->
+<!--            <td><input type="button" onclick="sum()" value="+"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><input type="button" onclick="four()" value="4"></td>-->
+<!--            <td><input type="button" onclick="five()" value="5"></td>-->
+<!--            <td><input type="button" onclick="six()" value="6"></td>-->
+<!--            <td><input type="button" onclick="subtract()" value="-"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><input type="button" onclick="one()" value="1"></td>-->
+<!--            <td><input type="button" onclick="two()" value="2"></td>-->
+<!--            <td><input type="button" onclick="three()" value="3"></td>-->
+<!--            <td><input type="button" onclick="multiply()" value="*"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><input type="button" onclick="erase()" value="C"></td>-->
+<!--            <td><input type="button" onclick="zero()" value="0"></td>-->
+<!--            <td><input type="button" onclick="result()" value="="></td>-->
+<!--            <td><input type="button" onclick="division()" value="/"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
+<!--<script>-->
+<!--    function seven(number) {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '7';-->
+<!--        // document.getElementById('a1').value + = number;-->
+<!--    }-->
+<!--    function eight() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '8';-->
+
+<!--    }-->
+<!--    function nine() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '9';-->
+<!--    }-->
+<!--    function sum() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '+';-->
+
+<!--    }function four() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '4';-->
+<!--    }-->
+<!--    function five() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '5';-->
+
+<!--    }-->
+<!--    function six() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '6';-->
+<!--    }-->
+<!--    function subtract() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '-';-->
+
+<!--    }-->
+<!--    function one() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '1';-->
+<!--    }-->
+<!--    function two() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '2';-->
+
+<!--    }-->
+<!--    function three() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '3';-->
+<!--    }-->
+<!--    function multiply() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '*';-->
+
+<!--    }-->
+<!--    function division() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '/';-->
+
+<!--    }-->
+<!--    function zero() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = e + '0';-->
+
+<!--    }-->
+<!--    function result() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = eval(e);-->
+<!--    }-->
+<!--    function erase() {-->
+<!--        let e = document.getElementById('a1').value;-->
+<!--        document.getElementById('a1').value = null;-->
+<!--    }-->
+
+<!--</script>-->
+<div>
+    <table>
+        <tr>
+            <input type="text" id="a1">
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhap('7')" value="7"></td>
+            <td><input type="button" onclick="nhap('8')" value="8"></td>
+            <td><input type="button" onclick="nhap('9')" value="9"></td>
+            <td><input type="button" onclick="nhap('+')" value="+"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhap('4')" value="4"></td>
+            <td><input type="button" onclick="nhap('5')" value="5"></td>
+            <td><input type="button" onclick="nhap('6')" value="6"></td>
+            <td><input type="button" onclick="nhap('-')" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhap('1')" value="1"></td>
+            <td><input type="button" onclick="nhap('2')" value="2"></td>
+            <td><input type="button" onclick="nhap('3')" value="3"></td>
+            <td><input type="button" onclick="nhap('*')" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="erase('C')" value="C"></td>
+            <td><input type="button" onclick="nhap('0')" value="0"></td>
+            <td><input type="button" onclick="result('=')" value="="></td>
+            <td><input type="button" onclick="nhap('/')" value="/"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function nhap(b1) {
+        document.getElementById('a1').value += b1
+
+    }
+    function result() {
+            let e = document.getElementById('a1').value;
+            document.getElementById('a1').value = eval(e);
+    }
+    function erase() {
+            let e = document.getElementById('a1').value;
+           document.getElementById('a1').value = null;
+    }
+</script>
+</body>
+</html>
