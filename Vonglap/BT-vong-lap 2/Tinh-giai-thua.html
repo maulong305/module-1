@@ -6,14 +6,12 @@
 </head>
 <body>
 <script>
-    let v = null;
-    do {
-        v = prompt("enter number");
-
+    let a = parseInt(prompt('enter number:'));
+    let t = 1;
+    for (let i = 1; i <= a; i++){
+        t *= i;
     }
-    while (v < 1 || v > 10);
-    document.write("bạn vừa nhập " + v)
-
+    document.write(t)
 </script>
 
 </body>
