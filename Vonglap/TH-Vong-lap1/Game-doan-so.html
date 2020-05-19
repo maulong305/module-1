@@ -5,6 +5,34 @@
     <title>Title</title>
 </head>
 <body>
+<button id="k" onclick="s()">Start</button>
+<script>
+    function s() {
+        let a = parseInt(prompt('enter number:'));
+        let b = Math.floor(Math.random()*a);
+        console.log(b)
+        let e;
+
+        for (let i = 0; i < 3; i ++){
+            let c = parseInt(prompt('select'));
+            e = true;
+            if (c > b){
+                alert("giảm xuông")
+            }
+            if (c < b){
+                alert("tăng lên")
+            }
+            if (b == c) {
+                e = false;
+                alert("win");
+                break;
+            }
+        }
+        if (e){
+            alert("lose")
+        }
+    }
+</script>
 
 </body>
 </html>
