@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i,j;
+    for (j = 7; j > 0; j--){
+        for (i = j; i > 0; i--){
+            document.write('*  &nbsp;');
+        }
+        document.write('<br>')
+    }
+    for (j = 1; j <= 7; j++){
+        for (i = j; i <= 7; i++){
+            document.write(" &nbsp; &nbsp;  ");
+        }
+        for (i = 1; i <=j; i++){
+            document.write("* &nbsp;")
+        }
+        document.write("<br>");
+    }
+    document.write('<br><br>')
+
+    for (j = 1; j <= 7; j++){
+        for (i =1; i <= j; i++){
+            document.write("&nbsp; &nbsp; ");
+        }
+        for (i = j; i <= 7; i++){
+
+            document.write("* &nbsp;");
+        }
+        document.write("<br>");
+
+    }
+    // document.write("<br><br>")
+
+    for (j =1; j <= 7; j++){
+        for (i = 1 ; i <= j; i++){
+            document.write('* &nbsp;');
+        }
+        document.write("<br>");
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
