@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 20;
+    let count = 0;
+    let n = 2;
+    let checker = false;
+    while (count < i){
+        for (let i = 2; i < n; i++){
+            if (n % i/2 ===0){
+                checker = true;
+            }
+        }
+        if (checker === false){
+            document.write(n + "<br>");
+            count++;
+        }
+        n++;
+        checker = false;
+
+    }
+
+</script>
+
+</body>
+</html>

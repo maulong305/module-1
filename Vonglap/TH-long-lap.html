@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    // let e;
+    // e = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    // for (let i = 1; i <= 10; i++){
+    //     e = e + "<tr>";
+    //     for (let j = 1; j <= 10; j++){
+    //         e = e + "<td>" + i*j + "</td>";
+    //     }
+    //     e = e + "</tr>"
+    // }
+    // e = e + "<table>";
+    // document.write(e)
+
+    let e, i, j;
+    e = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while (i <= 10){
+        e = e + "<tr>";
+        while (j <= 10){
+            e = e + "<td>" + i*j + "</td>>"; j++;
+        }
+        e = e + "</tr>"; j = 1; i++;
+    }
+    e = e + "</table>"
+    document.write(e)
+</script>
+
+</body>
+</html>
