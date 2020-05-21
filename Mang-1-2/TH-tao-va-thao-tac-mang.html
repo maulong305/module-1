@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a1">
+<input type="button" id="b1" onclick="b2()" value="Add">
+<input type="button" id="c1" onclick="c2()" value="Display">
+<div id="result"></div>
+<script>
+    let x = 0;
+    let mang = [];
+    function b2() {
+        mang[x] = document.getElementById("a1").value;
+        x++;
+        document.getElementById("a1").value = ""
+
+    }
+    function c2() {
+        let ketqua = "";
+        for (let i = 0; i < mang.length; i++){
+            ketqua += "Element: " + i + " = " + mang[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = ketqua;
+
+    }
+
+</script>
+</body>
+</html>
