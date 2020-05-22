@@ -43,6 +43,42 @@
         }
         document.write("<br>");
     }
+    document.write('<br><br>');
+// a = []
+    // x = "12"
+    // a = [x]
+    // a[0]
+    // b = "ab"
+    // b[0]
+    let khoangTrong ="&nbsp;&nbsp;&nbsp;"
+    let ngoiSao = "*&nbsp;"
+    // for(let soHang = 7; soHang > 0; soHang--) {
+    //     let s = [ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao];
+    //
+    //     // // logic con lai
+    //     for (let soCot = 1; soCot<=7; soCot++) {
+    //         if (soCot > 7 - soHang) {
+    //             s[soCot] = khoangTrong
+    //             // s += "&nbsp;&nbsp;"
+    //         // } else {
+    //         //     s += "&nbsp;*"
+    //         }
+    //     }
+    //
+    //
+    //     // cuoi cung s.length == 7
+    //     document.write(s.join("") + "<br>")
+    // }
+    for (let soHang = 0; soHang <= 7; soHang++){
+        let s = [ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao, ngoiSao];
+        for (let soCot = 0; soCot <= 7; soCot++){
+            if (soCot < soHang){
+                s[soCot] = khoangTrong;
+            }
+        }
+        document.write(s.join("") + "<br>")
+    }
+
 
 
 

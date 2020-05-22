@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let mang = [ 23, 43, 7, 19, 11, 25];
+    let mang = [ 23, 43, 7, 69, 11, 25];
     let max = mang[0];
-    let soHieu = 0;
-    for (let i = 1; i < mang.length; i++){
+    let viTri = 0;
+    for (let i = 1; i < mang.length; i ++){
         if (mang[i] > max){
-            max = mang[i];
-            soHieu = i;
+            max =  mang[i];
+            viTri = i;
         }
-    }document.write("gia tri lon nhat trong mang la " + max + " dung o vi tri " + soHieu)
-</script>
+    }
+    document.write("phần tử lớn nhất trong mảng có giá trị là :" + max + " đứng tại vị trí: " + viTri);
 
+</script>
 </body>
 </html>
