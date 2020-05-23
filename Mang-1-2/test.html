@@ -2,39 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>caro đơn giản</title>
 </head>
 <body>
 <p id="k"/>
 <script>
     let mang = [];
-    for (let i = 0; i < 5; i++){
-        mang[i] = [0, 0, 0, 0, 0];
+    for (let i =0; i <5; i++){
+        mang[i] = [0,0,0,0,0];
     }
     let s = "";
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i <5; i++){
         s += "<br>";
         for (let j = 0; j < 5; j++){
-            s += mang[i][j]
+            s += mang[i][j];
         }
+
     }
-    s += "<br><input type='button' value='change' onclick='change()'>";
-    document.getElementById("k").innerHTML = s;
+    s += "<br> <input type='button' onclick='change()' value='change'>";
+    document.getElementById('k').innerHTML = s;
     function change() {
-        let x = prompt("x:");
-        let y = prompt("y:");
+        let x = prompt("x");
+        let y = prompt("y");
         mang[x][y] = "x";
         s = "";
         for (let i = 0; i < 5; i++){
-            s += "<br>";
+            s += "<br>"
             for (let j = 0; j < 5; j++){
                 s += mang[i][j];
             }
         }
-        s += "<br> <input type='button' value='change' onclick='change()'>";
+        s += "<br> <input type='button' onclick='change()' value='change'>";
         document.getElementById('k').innerHTML = s;
     }
-</script>
 
+</script>
 </body>
 </html>

@@ -54,13 +54,13 @@
     }
     data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
     b.innerHTML = data;
-    console.log(board);
+    // console.log(board);
     function changeValue() {
         let positionX = prompt("X: ");
         let positionY = prompt("Y: ");
         data = "";
         board[positionX][positionY] = "x";
-        console.log(board);
+        // console.log(board);
         for (let i = 0; i < 5; i++) {
             data += "<br/>";
             for (let j = 0; j < 5; j++) {
