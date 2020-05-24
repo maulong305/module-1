@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tuổi</title>
+</head>
+<body>
+<input placeholder="Nhập năm sinh" type="text" id="a1">
+<input type="button" value="Tinhtuoi" onclick="tinh()">
+<div id="spr"></div>
+<script>
+    function tinh() {
+        //lấy giá trị nhập vào
+        let namSinh = document.getElementById('a1').value;
+        //lấy năm hiện tại
+        let thoiGian = new Date()
+
+        let namNay = thoiGian.getFullYear()
+        //tính tuổi
+        let tuoi = namNay - namSinh;
+        //in ra
+        document.getElementById('spr').innerHTML = "Tuổi của bạn là: "+ tuoi;
+    }
+</script>
+</body>
+</html>

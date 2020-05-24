@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia hết cho 3 hoặc 7</title>
+</head>
+<body>
+<script>
+    let a = ""
+    let mang = [];
+    let x = 0;
+    for (let i = 1; i < 100; i++){
+        if (i % 3 == 0 || i % 7 == 0){
+            a += i + ";";
+            mang.push(i);
+        }
+        x = mang.length
+    }
+    document.write("Tổng số lượng các số chia hết cho 3 hoặc 7 là: " + x + " số" + "<br>" + "Các số chia hết cho 3 hoặc 7 là: "+ a);
+</script>
+</body>
+</html>

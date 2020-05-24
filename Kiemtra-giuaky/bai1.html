@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Enter a number: <input type="text" id="a1"> <input type="button" value="Show" onclick="show()">
+<p id="k"/>
+<script>
+function kiemTrasoNt(sonhapvao) {
+//    kiểm tra số nhập vào có phải số NT hay ko.
+//    return true nếu là số NT,
+    let soNt = true;
+    for (let j = 2; j < sonhapvao; j++){
+        if (sonhapvao % j == 0){
+            soNt = false;
+        }
+    }
+    return  soNt
+}
+function show() {
+    let x = document.getElementById('a1').value;
+    let e = "";
+    for (let i = 1; i < x; i++){
+        // let soNt = true;
+        // for (let j = 2; j < i; j++){
+        //     if (i % j == 0){
+        //         soNt = false;
+        //     }
+        // }
+        // if (soNt){
+        //     e += i + ";";
+        // }
+        let kq = kiemTrasoNt(i);
+        if (kq){
+            e += i + ";";
+        }
+    }
+    document.getElementById("k").innerHTML = e;
+    debugger;
+}
+</script>
+</body>
+</html>
