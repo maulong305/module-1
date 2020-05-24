@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//khởi tạo ma trận
+    let maTran = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+    let duongCheo = [];
+    let tong = 0;
+//duyệt ma trận
+    for (let i = 0; i < maTran.length; i++){
+        let mang = maTran[i];
+        for (let j = 0; j < mang.length; j++){
+            if (i == j){
+                duongCheo.push(maTran[i][j]);
+            }
+        }
+    }
+    for (let a = 0; a < duongCheo.length; a++){
+        tong += duongCheo[a];
+    }
+    document.write(tong);
+//tìm đường chéo
+//tính tổng đường chéo
+</script>
+</body>
+</html>
