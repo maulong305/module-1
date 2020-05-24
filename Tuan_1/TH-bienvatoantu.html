@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h3>nhập và tính tổng điểm, điểm trung bình</h3>
+<script>
+    let inputphys;
+    let inputchem;
+    let inputbio;
+    inputphys = prompt('enter phys');
+    inputchem = prompt('enter chem');
+    inputbio = prompt('enter bio');
+    let phys = parseFloat(inputphys);
+    let chem = parseFloat(inputchem);
+    let bio = Number(inputbio);
+    let total = (phys+chem+bio);
+    let average = total/3;
+    alert('average:' + average);
+    alert('total:' + total );
+</script> -->
+<hr>
+<br>
+<h3>Tính Độ F</h3>
+0C <input type="text" id="oC" value="">
+<br>
+0F <input type="text" id="oF" value="">
+<input type="button" onclick="tinhF()" name="button" value="">
+<script>
+    function tinhF() {
+        let C = document.getElementById('oC').value;
+        let F = C/5*9+32;
+        document.getElementById("oF").value = F;
+    }
+</script>
+<hr>
+<br>
+<h3>Tính S và C hình tròn</h3>
+r=: <input type="text" id="r" value="">
+<br><br>
+<input type="button" onclick="tinhScercle()" name="button" value="Scercle">
+S=: <input type="text" id="Scercle" value="">
+<br><br>
+<input type="button" onclick="tinhCcercle()" name="button" value="Ccercle">
+C=: <input type="text" id="Ccercle" value="">
+<script>
+    function tinhScercle() {
+        let r = document.getElementById('r').value;
+        let pi = 3.14;
+        let S = pi*r*r;
+
+        document.getElementById('Scercle').value = S;
+
+
+    }
+    function tinhCcercle() {
+        let r = document.getElementById('r').value;
+        let pi = 3.14;
+        let C = 2*pi*r;
+        document.getElementById('Ccercle').value = C;
+
+    }
+</script>
+<hr>
+<br>
+<h3>Ứng dụng chuyển đổi tiền tệ</h3>
+<div>
+    <table>
+        <tr>
+            <td>Amount</td> <td>From Currency</td> <td>To Currency</td> <td></td>
+        </tr>
+        <br>
+        <tr>
+            <td><input type="text" id="nhap" value=""></td>
+            <td><select name="" id="">
+                <option value="VND">VND</option>
+                <option value="VND">USD</option>
+            </select></td>
+            <td><select name="" id="">
+                <option value="VND">USD</option>
+                <option value="VND">VND</option>
+            </select></td>
+            <td><input type="button" onclick="chuyendoi()" value="Convert"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="chuyendoi" value=""></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+    </table>
+
+</div>
+<script>
+    function chuyendoi() {
+        let VND = document.getElementById('nhap').value;
+        let USD = VND/23000;
+        document.getElementById('chuyendoi').value = USD;
+
+
+    }
+</script>
+<hr>
+<br>
+<h3>ứng dụng máy tính</h3>
+<div>
+    <table>
+        <input type="text" id="nhapa" value="">
+        <input type="text" id="nhapb" value=""> <br>        <br>
+
+        <input type="button" onclick="cong()" value="cong">
+        <input type="button" onclick="tru" value="tru">
+        <input type="button" onclick="nhan" value="nhan">
+        <input type="button" onclick="chia" value="chia"> <br><br>
+
+        <input type="text" id="kq" value="">
+
+    </table>
+</div>
+<script>
+    function cong() {
+        let a = parseFloat(document.getElementById('nhapa').value);
+        let b = parseFloat(document.getElementById('nhapb').value);
+        let cong = a + b;
+        document.getElementById('kq').value = cong;
+
+    }
+
+</script>
+
+</body>
+</html>

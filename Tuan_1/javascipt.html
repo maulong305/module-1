@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h2>what can JavaScript do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick="thaydoi()">Click me</button>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<br><br>
+<h2>What can JavaScript do?</h2>
+<p>in this case javascript changers the src (source) attribute of an image</p>
+<button onclick="batden()">Turn on the light</button>
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+<button onclick="tatden()">Turn off the light</button>
+<br>
+<button onclick="batgai()">turn on</button>
+<br>
+
+<script>
+    function batgai() {
+        document.getElementById("myImage").src ='https://scontent.fhan3-3.fna.fbcdn.net/v/t1.0-9/84289198_2835478659872536_7928022321426595840_o.jpg?_nc_cat=100&_nc_sid=730e14&_nc_ohc=E_JdrG_AvG4AX9l7RqR&_nc_ht=scontent.fhan3-3.fna&oh=53500dbd9439008befc4d7fec38a4bf6&oe=5EE2359B';
+        document.getElementById('myImage').style ='width:300px'
+        }
+    function batden() {
+        document.getElementById('myImage').src ='https://www.w3schools.com/js/pic_bulbon.gif';
+        document.getElementById('myImage').style ='width:100px'
+
+    }
+    function tatden() {
+        document.getElementById('myImage').src ='https://www.w3schools.com/js/pic_bulboff.gif';
+        document.getElementById('myImage').style ='width:100px'
+
+    }
+     function thaydoi() {
+        document.getElementById("demo").innerHTML = "Nguyen VAN a";
+    }
+
+</script>
+</body>
+</html>

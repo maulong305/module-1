@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>khai báo các biến thuộc các kiểu khác nhau</h3>
+<script>
+    let i = 10;
+    document.write('i = ' + i);
+    document.write('<br/>')
+    let f = 20.5;
+    document.write('f = ' + f)
+    document.write('<br/>')
+    let b = true;
+    document.write('b = ' + b)
+    document.write('<br/>')
+    let s = 'Hà Nội'
+    document.write('s = ' + s)
+</script>
+<hr>
+<br>
+<h3>viết một đoạn mã javascript</h3>
+<script>
+
+    let width = 20;
+    let height = 10;
+    let area = width * height;
+    document.write('area = ' + area)
+    function Tinh_S() {
+        let width = document.getElementById('width').value
+        let height = document.getElementById('height').value
+        let area = width * height
+        document.getElementById('ketqua').value = area
+
+    }
+</script>
+<br>
+S &nbsp; <input type="text" id="ketqua" value=""> <br><br>
+Width &nbsp;<input type=text id="width" value="">
+<br><br>
+
+Height &nbsp;<input type=text id="height" value="">
+<br><br>
+<input type="button" onclick="Tinh_S()" name="button" value="kết quả">
+<hr>
+<br>
+<script type="text/javascript" src="khaibaobien.js"></script>
+<hr>
+<br>
+
+</body>
+</html>

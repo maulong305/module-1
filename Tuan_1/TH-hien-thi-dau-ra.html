@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>hiển thị kết quả sử dụng hàm alert():</h3>
+<button type="button" onclick="showMessage1();">Click Me</button>
+<script>
+function showMessage1(){
+    alert('Xin chào');
+    }
+</script>
+<hr>
+<br>
+<h3>Hiển thị kết quả sử dụng thẻ HTML:</h3>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage2();">click me</button>
+<Script>
+    function showMessage2() {
+document.getElementById('messageDiv').innerHTML = 'xin chào!'
+    }
+</Script>
+<hr>
+<br>
+<h3>hiển thị kết quả sử dụng hàm document.write():</h3>
+<button type="button" onclick="showMessage3();">click me</button>
+<script>
+    function showMessage3() {
+document.write('xin chào!')
+    }
+</script>
+<hr>
+<br>
+<h3>hiển thị kết quả sử dụng hàm console.log():</h3>
+<br>
+<button type="button" onclick="showMessage4();">click me</button>
+<script>
+    function showMessage4(){
+        console.log('xin chào!');
+    }
+</script>
+<hr>
+<br>
+<h3>thực hành nhúng JavaScript</h3>
+<button type="button" onclick="showMessage();">Click me</button>
+<script>
+    function showMessage() {
+alert('xin chào')
+    }
+</script>
+<hr>
+<br>
+<h3>nhúng file .js</h3>
+<button type="button" onclick="showMessage();">Click me</button>
+<script src="thuc-hanh-nhung.js"></script>
+
+</body>
+</html>
