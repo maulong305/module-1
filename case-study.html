@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="button" onclick="main()" value="Quay">
+<div>
+    <table border="2" cellpadding="5" cellspacing="8">
+        <tr>
+            <td colspan="5" style="text-align: center"><h1>KẾT QUẢ XỔ SỐ</h1></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Giải Đặc Biệt" disabled></td>
+            <td colspan="4"><input type="text" id="giaidb" disabled style="text-align: center"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Giải Nhất" disabled></td>
+            <td colspan="4"><input type="text" id="giai1" disabled style="text-align: center"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Giải Nhì" disabled></td>
+            <td colspan="2"><input type="text" id="giai2.1" disabled style="text-align: center"></td>
+            <td colspan="2"><input type="text" id="giai2.2" disabled style="text-align: center"></td>
+        </tr>
+        <div>
+            <tr>
+                <td rowspan="2" style="height: auto"><input type="text" value="Giải Ba" disabled></td>
+                <td><input type="text" id="giai3.1" style="text-align: center" disabled></td>
+                <td><input type="text" id="giai3.2" style="text-align: center" disabled></td>
+                <td><input type="text" id="giai3.3" style="text-align: center" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="giai3.4" style="text-align: center" disabled></td>
+                <td><input type="text" id="giai3.5" style="text-align: center" disabled></td>
+                <td><input type="text" id="giai3.6" style="text-align: center" disabled></td>
+            </tr>
+        </div>
+        <tr>
+            <td><input type="text" value="Giải Tư" disabled></td>
+            <td><input type="text" id="giai4.1" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai4.2" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai4.3" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai4.4" style="text-align: center" disabled></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><input type="text" value="Giải Năm" disabled></td>
+            <td><input type="text" id="giai5.1" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai5.2" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai5.3" style="text-align: center" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="giai5.4" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai5.5" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai5.6" style="text-align: center" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Giải Sáu" disabled></td>
+            <td><input type="text" id="giai6.1" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai6.2" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai6.3" style="text-align: center" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Giải Bảy" disabled></td>
+            <td><input type="text" id="giai7.1" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai7.2" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai7.3" style="text-align: center" disabled></td>
+            <td><input type="text" id="giai7.4" style="text-align: center" disabled></td>
+        </tr>
+        <script>
+            function main() {
+                quay(99999, 5, "giai1");
+                quay(99999, 5, "giai2.1");
+                quay(99999, 5, "giai2.2");
+                quay(99999, 5, "giai3.1");
+                quay(99999, 5, "giai3.2");
+                quay(99999, 5, "giai3.3");
+                quay(99999, 5, "giai3.4");
+                quay(99999, 5, "giai3.5");
+                quay(99999, 5, "giai3.6");
+                quay(9999, 4, "giai4.1");
+                quay(9999, 4, "giai4.2");
+                quay(9999, 4, "giai4.3");
+                quay(9999, 4, "giai4.4");
+                quay(9999, 4, "giai5.1");
+                quay(9999, 4, "giai5.2");
+                quay(9999, 4, "giai5.3");
+                quay(9999, 4, "giai5.4");
+                quay(9999, 4, "giai5.5");
+                quay(9999, 4, "giai5.6");
+                quay(999, 3, "giai6.1");
+                quay(999, 3, "giai6.2");
+                quay(999, 3, "giai6.3");
+                quay(99, 2, "giai7.1");
+                quay(99, 2, "giai7.2");
+                quay(99, 2, "giai7.3");
+                quay(99, 2, "giai7.4");
+                quay(99999, 5, "giaidb");
+            }
+
+            function quay(y, length, id) {
+                let x;
+                x = random(y);
+                fill(x, length, id)
+            }
+
+            function random(y) {
+                let kq = Math.floor(Math.random() * y)
+                return kq;
+            }
+
+            function fill(kq, length, id) {
+                let str = kq.toString();
+                if (str.length < length) {
+                    while (str.length < length) {
+                        str = "0" + str;
+                    }
+                }
+                document.getElementById(id).value = str;
+            }
+        </script>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="nhập độ C">
+<input type="button" onclick="chuyendoi()" value="chuyendoi">
+<p id="ra"></p>
+<script>
+    let temperature = function (c) {
+        if (c >= -273){
+            this.c;
+            this.getC = function () {
+                return c;
+            }
+            this.getF = function () {
+                return (1.8 * c + 32);
+            }
+            this.getK = function () {
+                return (c + 273.15);
+            }
+
+        }
+        else {
+            alert("lỗi")
+        }
+
+    }
+
+    function chuyendoi() {
+        let c = new temperature(document.getElementById("nhap").value);
+        let f = c.getF();
+        let k = c.getK();
+        document.getElementById("ra").innerHTML = (f + "<br>" + k);
+    }
+
+</script>
+
+</body>
+</html>

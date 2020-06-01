@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="nhap chuoi">
+<input type="button" onclick="kiemTra()" value="kiem tra">
+<p id="kq"/>
+<script>
+    function kiemTra() {
+        let mang = document.getElementById('nhap').value;
+        for (let i = 0; i < mang.length; i++){
+            if (mang[i] === mang[mang.length-1 - i]) {
+                document.getElementById('kq').innerHTML = 'doi xung';
+            }
+            else {
+                document.getElementById('kq').innerHTML = 'ko doi xung';
+            }
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

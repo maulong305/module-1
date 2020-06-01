@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="main()" value="Quay">
+<p id="ketqua1"></p>
+<p id="ketqua2"></p>
+<p id="ketqua3"></p>
+<script>
+    function main() {
+        quay(99999,5,"ketqua1")
+        quay(9999,4,"ketqua2")
+    }
+    function quay(y,length,id) {
+        let x;
+        //tìm ra số random
+        x = random(y);
+        x = random(y);
+        x = random(y);
+        //điền số random vào ô kq
+        fill(x,length,id)
+    }
+    function random(y) {
+        let kq = Math.floor(Math.random()*y)
+        return kq;
+    }
+    function fill(kq,length,id) {
+        let str = kq.toString();
+        if (str.length < length) {
+            while (str.length < length) {
+                str = "0" + str;
+            }
+        }
+        document.getElementById(id).innerText = str;
+
+    }
+</script>
+
+</body>
+</html>
