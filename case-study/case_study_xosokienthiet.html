@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr {
+            text-align: center;
+        }
+
+        input {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<input type="button" onclick="creatNewResult()" value="Quay">
+<input type="text" id="dateCode">
+<button type="button" onclick="showResult()">Show</button>
+<p id="in"></p>
+<table border="2" cellpadding="5" cellspacing="8">
+    <tr>
+        <td colspan="5" style="text-align: center"><h1>KẾT QUẢ XỔ SỐ</h1></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Đặc Biệt" disabled></td>
+        <td colspan="4"><input type="text" id="giai00" disabled
+                               style="text-align: center; color: red; font-size: x-large;"></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Nhất" disabled></td>
+        <td colspan="4"><input type="text" id="giai10" disabled style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Nhì" disabled></td>
+        <td colspan="2"><input type="text" id="giai20" disabled style="text-align: center"></td>
+        <td colspan="2"><input type="text" id="giai21" disabled style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="height: auto"><input type="text" value="Giải Ba" disabled></td>
+        <td><input type="text" id="giai30" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai31" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai32" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="giai33" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai34" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai35" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Tư" disabled></td>
+        <td><input type="text" id="giai40" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai41" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai42" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai43" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td rowspan="2"><input type="text" value="Giải Năm" disabled></td>
+        <td><input type="text" id="giai50" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai51" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai52" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="giai53" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai54" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai55" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Sáu" disabled></td>
+        <td><input type="text" id="giai60" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai61" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai62" style="text-align: center" disabled></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Giải Bảy" disabled></td>
+        <td><input type="text" id="giai70" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai71" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai72" style="text-align: center" disabled></td>
+        <td><input type="text" id="giai73" style="text-align: center" disabled></td>
+    </tr>
+</table>
+<script>
+    let lottery = function () {
+        this.result = new Array(8);
+        this.getResult = function () {
+            this.result[0] = new Prize(99999, 1);
+            this.result[1] = new Prize(99999, 1);
+            this.result[2] = new Prize(99999, 2);
+            this.result[3] = new Prize(99999, 6);
+            this.result[4] = new Prize(9999, 4);
+            this.result[5] = new Prize(9999, 6);
+            this.result[6] = new Prize(999, 3);
+            this.result[7] = new Prize(99, 4);
+
+            for (let i = 0; i < this.result.length; i++) {
+                this.result[i].rouLette();
+            }
+        }
+    }
+    let Prize = function (strLength, numberPrize) {
+        this.strLength = strLength;
+        this.numberPrize = numberPrize;
+        this.lotteryResult = new Array(numberPrize);
+        this.rouLette = function () {
+            for (let i = 0; i < numberPrize; i++) {
+                let str = Math.floor(Math.random() * this.strLength).toString();
+                while (str.length < strLength.toString().length) {
+                    str = "0" + str;
+                }
+                this.lotteryResult[i] = str;
+            }
+        }
+    }
+    let dailyResult = [];
+
+
+    function creatNewResult() {
+        let newResult = new Array(2);
+        let enterDate = prompt("Enter the date:");
+        newResult[0] = enterDate;
+        newResult[1] = new lottery();
+        newResult[1].getResult();
+        dailyResult.push(newResult);
+        display(newResult[1]);
+
+    }
+
+    function display(lotteriList) {
+        for (let i = 0; i < lotteriList.result.length; i++) {
+            for (let j = 0; j < lotteriList.result[i].lotteryResult.length; j++) {
+                document.getElementById("giai" + i + j).value = lotteriList.result[i].lotteryResult[j];
+            }
+        }
+    }
+
+    function showResult() {
+        let dateHappened = document.getElementById("dateCode").value;
+        if (dailyResult.length > 0) {
+            let found = true;
+            for (let i = 0; i < dailyResult.length; i++) {
+                if (dailyResult[i][0] == dateHappened) {
+                    display(dailyResult[i][1]);
+                    found = false;
+
+                }
+            }
+            if (found) {
+                alert("No data found!");
+
+            }
+        } else {
+            alert("No data in history!");
+        }
+
+    }
+
+</script>
+</body>
+</html>
